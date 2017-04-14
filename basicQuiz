@@ -1,14 +1,25 @@
 var fs = require('fs');
+var BasicCard = require('./basic.js');
+var basicFullText = [];
+var basicAnswers = [];
 
-fs.readFile('basic.txt', 'utf8', function (err,data){
+fs.readFile('cloze.txt', 'utf8', function (err,data){
         if (err) {
             console.log('Error: ' + err)}
         else {
-            data = data.split(',');
-            console.log(data[0]);
-            console.log(data[1]);
-            
-
-        }});
+           var response = data.split(',');
+           //console.log('Response outside for loop: ' + response.length);
+           //console.log(response[0]);
+           for ( var i = 0; i < response.length; i+=2) {
+               Basic = new BasicCard(response[i], response[i+1]);
+               //console.log(Cloze);
+               //console.log('Question: ' + Cloze.partial + '\n');
+               basicFullText.push(Basic.fullText);
+               basicAnswers.push(Basic.answers);
+                }
+            console.log('Basic QUESTIONS: ' + basicFullText[0]);
+            console.log('Basic Answers: ' + basicAnswers[0]);
+            } 
+        });
 
 
