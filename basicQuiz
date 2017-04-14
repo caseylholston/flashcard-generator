@@ -17,8 +17,8 @@ fs.readFile('cloze.txt', 'utf8', function (err,data){
                basicFullText.push(Basic.fullText);
                basicAnswers.push(Basic.answers);
                 }
-            console.log('Basic QUESTIONS: ' + basicFullText[0]);
-            console.log('Basic Answers: ' + basicAnswers[0]);
+            console.log('Basic Question: ' + basicFullText[0]);
+            console.log('Basic Answer: ' + basicAnswers[0]);
             } 
         });
 
