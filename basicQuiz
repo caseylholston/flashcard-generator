@@ -1,0 +1,14 @@
+var fs = require('fs');
+
+fs.readFile('basic.txt', 'utf8', function (err,data){
+        if (err) {
+            console.log('Error: ' + err)}
+        else {
+            data = data.split(',');
+            console.log(data[0]);
+            console.log(data[1]);
+            
+
+        }});
+
+

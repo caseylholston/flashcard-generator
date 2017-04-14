@@ -1,0 +1,22 @@
+{
+  "name": "flashcard-generator",
+  "version": "1.0.0",
+  "description": "Takes in user inputs to create either a basic flashcard or a cloze flashcard",
+  "main": "cli.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caseylholston/flashcard-generator.git"
+  },
+  "author": "caseylholston",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/caseylholston/flashcard-generator/issues"
+  },
+  "homepage": "https://github.com/caseylholston/flashcard-generator#readme",
+  "dependencies": {
+    "inquirer": "^3.0.6"
+  }
+}
