@@ -1,6 +1,8 @@
 var fs = require('fs');
 var ClozeCard = require('./cloze.js');
 var clozeQuestions = [];
+var clozes = [];
+var clozeFullText = [];
 
 fs.readFile('cloze.txt', 'utf8', function (err,data){
         if (err) {
@@ -14,9 +16,14 @@ fs.readFile('cloze.txt', 'utf8', function (err,data){
                //console.log(Cloze);
                //console.log('Question: ' + Cloze.partial + '\n');
                clozeQuestions.push(Cloze.partial);
+               clozes.push(Cloze.cloze);
+               clozeFullText.push(Cloze.fullText);
+
                
                 }
             console.log('CLOZE QUESTIONS: ' + clozeQuestions[0]);
+            console.log('CLOZE Cloze: ' + clozes[0]);
+            console.log('CLOZE Full Text: ' + clozeFullText[0]);
             } 
         });
 // var Cloze = new ClozeCard(fullText, cloze);
