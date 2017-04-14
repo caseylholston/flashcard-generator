@@ -78,8 +78,14 @@ inquirer.prompt(question1).then(function (answers){
 
                 case 'Cloze':
                     inquirer.prompt(question3b).then(function (answers){
-                    fs.appendFile('cloze.txt', ','+ answers.clozeQuestion +','+ answers.cloze, function(err){
-                        if (err) (console.log('Error: ' + err))});
+                        if ( answers.clozeQuestion.includes(answers.cloze) === true){
+                            fs.appendFile('cloze.txt', ','+ answers.clozeQuestion +','+ answers.cloze, function(err){
+                            if (err) (console.log('Error: ' + err))});
+                            }
+                        else{
+                            console.log('Sorry, that is not how a cloze flashcard works -- Try Again');
+                            return;
+                        }
                     });
                 break;
                 } 
